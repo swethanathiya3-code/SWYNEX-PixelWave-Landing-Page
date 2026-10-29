@@ -1,0 +1,317 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #07111f;
+  color: #f1f5f9;
+  line-height: 1.7;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 8%;
+  background: #0b1728;
+  border-bottom: 1px solid #203047;
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.logo span,
+.hero h1 span {
+  color: #22d3ee;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: #cbd5e1;
+  text-decoration: none;
+}
+
+nav a:hover,
+.text-link:hover {
+  color: #22d3ee;
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.section {
+  padding: 85px 8%;
+  scroll-margin-top: 65px;
+}
+
+.hero {
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: radial-gradient(ellipse at 80% 30%, #123d57 0%, #07111f 55%);
+}
+
+.section-tag {
+  color: #22d3ee;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: clamp(38px, 6vw, 66px);
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: clamp(28px, 4vw, 38px);
+  margin-bottom: 28px;
+}
+
+h3 {
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+
+.hero > p:not(.section-tag),
+.about > p:not(.section-tag),
+.contact > p:not(.section-tag) {
+  max-width: 650px;
+  color: #b8c5d6;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.btn {
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.primary {
+  color: #07111f;
+  background: #22d3ee;
+}
+
+.secondary {
+  color: white;
+  border: 1px solid #64748b;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.card {
+  padding: 26px;
+  background: #101e31;
+  border: 1px solid #25374e;
+  border-radius: 14px;
+}
+
+.card-icon {
+  color: #22d3ee;
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.card p,
+.project-info > p:not(.section-tag) {
+  color: #b8c5d6;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  overflow: hidden;
+  border: 1px solid #25374e;
+  border-radius: 16px;
+  background: #101e31;
+}
+
+.project-art {
+  display: grid;
+  place-items: center;
+  min-height: 260px;
+  background: linear-gradient(135deg, #164e63, #172554);
+}
+
+.project-art span {
+  font-size: 65px;
+  font-weight: bold;
+}
+
+.project-info {
+  padding: 30px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.tags span {
+  color: #67e8f9;
+  background: #123448;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.text-link {
+  color: #22d3ee;
+  text-decoration: none;
+}
+
+.about {
+  background: #0b1728;
+}
+
+.password-box {
+  max-width: 420px;
+  margin-top: 25px;
+  padding: 24px;
+  border: 1px solid #164e63;
+  border-radius: 16px;
+  background: #0b172a;
+}
+
+.password-box label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.password-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border: 1px solid #64748b;
+  border-radius: 8px;
+  background: #fff;
+  color: #111827;
+}
+
+.password-box button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #22d3ee;
+  color: #06111f;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#passwordMessage {
+  margin-top: 12px;
+}
+
+.contact-details {
+  max-width: 420px;
+  margin-top: 20px;
+  padding: 24px;
+  border-radius: 16px;
+  background: #10243a;
+  overflow-wrap: anywhere;
+}
+
+.contact-details[hidden] {
+  display: none;
+}
+
+.demo-note {
+  color: #94a3b8;
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+footer {
+  padding: 24px 8%;
+  text-align: center;
+  color: #94a3b8;
+  border-top: 1px solid #203047;
+}
+
+@media (max-width: 700px) {
+  .header {
+    padding: 16px 5%;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: 10px 5%;
+    background: #0b1728;
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  nav a {
+    padding: 12px 0;
+  }
+
+  .section {
+    padding: 65px 6%;
+  }
+
+  .cards,
+  .project-card {
+    grid-template-columns: 1fr;
+  }
+
+  .project-art {
+    min-height: 180px;
+  }
+}
+
